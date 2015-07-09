@@ -17,6 +17,7 @@ supportExternalHeight = 1;
 supportHullDiam = 5;
 slotsDistance = 60;
 slotsDiameter = 8;
+slotDepth = 5.5;
 
 
 module base()
@@ -29,7 +30,7 @@ module base()
 
     for(side=[top,bottom])
     {
-      translate([-baseWidth/2-1,side * slotsDistance/2,baseHeight])
+      translate([-baseWidth/2-1,side * slotsDistance/2,baseHeight-slotDepth+slotsDiameter/2])
         rotate([0,90,0])
           cylinder(baseWidth+2,d=slotsDiameter);
     }
